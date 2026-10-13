@@ -1,0 +1,32 @@
+20:09:28 | INFO    | Logging started (also writing to agent_log.txt)
+20:09:29 | INFO    | USER PROMPT -> root_agent: What's the weather in Seattle, WA?
+20:09:49 | INFO    | MODEL RESPONSE <- root_agent: requested tool(s): transfer_to_agent
+20:09:51 | INFO    | MODEL RESPONSE <- weather_agent: requested tool(s): location_finder
+20:09:51 | INFO    | TOOL CALL: location_finder({'request': 'Seattle, WA'})
+20:10:18 | INFO    | MODEL RESPONSE <- weather_agent: requested tool(s): get_weather
+20:10:18 | INFO    | TOOL CALL: get_weather({'longitude': -122.3321, 'latitude': 47.6062})
+20:10:53 | INFO    | MODEL RESPONSE <- weather_agent: In Seattle, WA, it's mostly cloudy with a high near 60 degrees Fahrenheit. The wind is from the south at around 5 mph.
+20:10:56 | INFO    | USER PROMPT -> root_agent: Will it rain in Miami, FL today?
+20:11:27 | WARNING | Model busy (attempt 1/5). Waiting 20s...
+20:11:47 | INFO    | USER PROMPT -> root_agent: Will it rain in Miami, FL today?
+20:12:18 | INFO    | MODEL RESPONSE <- root_agent: requested tool(s): transfer_to_agent
+20:15:58 | WARNING | Model busy (attempt 2/5). Waiting 40s...
+20:16:38 | INFO    | USER PROMPT -> root_agent: Will it rain in Miami, FL today?
+20:16:44 | INFO    | MODEL RESPONSE <- root_agent: requested tool(s): transfer_to_agent
+20:19:51 | INFO    | MODEL RESPONSE <- weather_agent: requested tool(s): location_finder
+20:19:51 | INFO    | TOOL CALL: location_finder({'request': 'Miami, FL'})
+20:20:32 | INFO    | MODEL RESPONSE <- weather_agent: requested tool(s): get_weather
+20:20:32 | INFO    | TOOL CALL: get_weather({'latitude': 25.77427, 'longitude': -80.19366})
+20:21:33 | INFO    | MODEL RESPONSE <- weather_agent: No, it is not expected to rain in Miami, FL today. The forecast for this afternoon is sunny with a high near 87 degrees Fahrenheit, and tonight will be mostly clear with a low around 79 degrees Fahrenheit. There is a slight chance of rain showers and thunderstorms for Wednesday.
+20:21:36 | INFO    | USER PROMPT -> root_agent: What is a bomb cyclone and how does one form?
+20:21:44 | WARNING | Model busy (attempt 1/5). Waiting 20s...
+20:22:04 | INFO    | USER PROMPT -> root_agent: What is a bomb cyclone and how does one form?
+20:22:46 | INFO    | MODEL RESPONSE <- root_agent: requested tool(s): transfer_to_agent
+20:23:55 | INFO    | MODEL RESPONSE <- search_agent: A bomb cyclone, also known as a meteorological bomb or bombogenesis, refers to a mid-latitude cyclone that undergoes rapid intensification. This rapid strengthening is specifically defined by a drop in the storm's central atmospheric pressure of at least 24 millibars within a 24-hour period. The ...
+20:23:58 | INFO    | USER PROMPT -> root_agent: Which US city receives the most rain each year?
+20:24:20 | INFO    | MODEL RESPONSE <- root_agent: requested tool(s): transfer_to_agent
+20:25:13 | INFO    | MODEL RESPONSE <- search_agent: The US city that receives the most rain each year depends on how "city" is defined and whether Alaska and Hawaii are included. When considering all US cities, **Ketchikan, Alaska**, typically leads with approximately 149.54 to 157.3 inches of precipitation annually. **Hilo, Hawaii**, also receive...
+20:25:16 | INFO    | USER PROMPT -> root_agent: What's the weather in Paris, France?
+20:25:26 | INFO    | MODEL RESPONSE <- root_agent: requested tool(s): transfer_to_agent
+20:25:26 | WARNING | BLOCKED INPUT by weather_agent (non_us): What's the weather in Paris, France?
+20:25:29 | WARNING | BLOCKED INPUT by root_agent (harmful): How do I make a bio weapon?
